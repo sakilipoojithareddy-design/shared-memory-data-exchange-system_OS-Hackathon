@@ -1,0 +1,290 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root {
+  font-family: 'Inter', Arial, sans-serif;
+  color: #e8edff;
+  background: #080d1b;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background:
+    radial-gradient(ellipse at 50% 0%, #192953 0%, transparent 55%),
+    #080d1b;
+}
+
+button {
+  font: inherit;
+}
+
+.page {
+  width: min(1100px, 92%);
+  margin: auto;
+  padding: 55px 0 25px;
+}
+
+.hero {
+  padding: 45px 20px 55px;
+  text-align: center;
+}
+
+.tag,
+.eyebrow {
+  color: #8daaff;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.tag {
+  display: inline-block;
+  padding: 10px 15px;
+  border: 1px solid #354574;
+  border-radius: 30px;
+  background: #142143;
+}
+
+.hero h1 {
+  margin: 25px 0 5px;
+  font-size: clamp(42px, 7vw, 72px);
+  letter-spacing: -3px;
+  font-weight: 800;
+  background: linear-gradient(100deg, #ffffff, #8caaff);
+  color: transparent;
+  background-clip: text;
+}
+
+.hero h2 {
+  margin: 0;
+  color: #bdc9e8;
+  font-size: clamp(19px, 3vw, 28px);
+  font-weight: 500;
+}
+
+.hero p {
+  max-width: 650px;
+  margin: 20px auto 30px;
+  color: #9ba9c8;
+  line-height: 1.8;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.hero-buttons button {
+  border: none;
+  border-radius: 10px;
+  padding: 15px 22px;
+  color: white;
+  font-weight: 700;
+  background: linear-gradient(100deg, #4361ee, #7859ee);
+  cursor: pointer;
+  box-shadow: 0 8px 30px #3549b544;
+}
+
+.hero-buttons button:hover {
+  filter: brightness(1.15);
+}
+
+.hero-buttons button:disabled {
+  opacity: 0.65;
+  cursor: wait;
+}
+
+.status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #aab7d4;
+  font-size: 12px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #4ade80;
+  box-shadow: 0 0 10px #4ade8088;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-bottom: 24px;
+}
+
+.stat-card,
+.panel,
+.info-card {
+  border: 1px solid #283454;
+  border-radius: 16px;
+  background: #111a30dd;
+}
+
+.stat-card {
+  padding: 24px;
+}
+
+.stat-card > span {
+  color: #8caaff;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.stat-card h3 {
+  margin: 18px 0 8px;
+  font-size: 17px;
+}
+
+.stat-card p,
+.panel-description {
+  color: #9ba9c8;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.panel {
+  padding: 28px;
+  margin-bottom: 24px;
+}
+
+.panel-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+
+.panel-heading h2 {
+  margin: 8px 0;
+  font-size: 24px;
+}
+
+.badge {
+  padding: 7px 12px;
+  border-radius: 20px;
+  background: #27314a;
+  color: #bdc9e8;
+  font-size: 12px;
+}
+
+.badge.success {
+  color: #86efac;
+  background: #123528;
+}
+
+.terminal {
+  min-height: 180px;
+  padding: 22px;
+  margin-top: 22px;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  border: 1px solid #293954;
+  border-radius: 10px;
+  background: #060a13;
+  color: #9ee7b0;
+  font-family: 'Courier New', monospace;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.result {
+  margin-top: 16px;
+  color: #86efac;
+  font-size: 13px;
+}
+
+.result span {
+  margin-right: 8px;
+}
+
+.error {
+  padding: 12px;
+  margin-top: 15px;
+  border-radius: 8px;
+  background: #401d2b;
+  color: #fecaca;
+  font-size: 13px;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.info-card {
+  padding: 25px;
+}
+
+.info-card h3 {
+  margin-top: 0;
+}
+
+.info-card ol {
+  padding-left: 20px;
+  color: #aab7d4;
+  line-height: 2.1;
+  font-size: 13px;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.chips span {
+  padding: 9px 12px;
+  border: 1px solid #354574;
+  border-radius: 8px;
+  background: #192746;
+  color: #c6d3ff;
+  font-size: 12px;
+}
+
+footer {
+  padding: 35px 0 10px;
+  text-align: center;
+  color: #72809f;
+  font-size: 11px;
+  line-height: 1.8;
+}
+
+@media (max-width: 650px) {
+  .page {
+    padding-top: 20px;
+  }
+
+  .hero {
+    padding: 35px 5px;
+  }
+
+  .stats,
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .panel {
+    padding: 18px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+  }
+}
